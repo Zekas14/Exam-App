@@ -3,6 +3,7 @@ using ExaminationSystem.Data.Repos;
 using ExaminationSystem.Services.Courses;
 using ExaminationSystem.Services.ExamQuestions;
 using ExaminationSystem.Services.Exams;
+using ExaminationSystem.Services.Result;
 using ExaminationSystem.Services.Students;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,6 +20,7 @@ builder.Services.AddScoped<ICourseServices, CourseServices>();
 builder.Services.AddScoped<IStudentCourseServices, StudentCourseServices>();
 builder.Services.AddScoped<IExamService, ExamService>();
 builder.Services.AddScoped<IExamQuestionService, ExamQuestionService>();
+builder.Services.AddScoped<IExamResultServices, ExamResultServices>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

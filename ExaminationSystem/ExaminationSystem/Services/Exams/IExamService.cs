@@ -10,5 +10,6 @@ namespace ExaminationSystem.Services.Exams
         ApiResponseDto<int> Update(int id, ExamUpdateDto dto);
         ApiResponseDto<int> AddQuestionToExam(ExamQuestionCreateDto dto);
         ApiResponseDto<TakeExamDto> TakeExam(int examId);
+        ApiResponseDto<int> SubmitExam(ExamSubmissionDto dto);
     }
 }

@@ -1,14 +1,14 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using ExaminationSystem.Models;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ExaminationSystem.Model
 {
-    public class ExamResult
+    public class ExamResult : BaseModel
     {
-        public int Id { get; set; }
         [ForeignKey("Exam")]
         public int ExamId { get; set; }
         public Exam Exam { get; set; }
-        public int Score { get; set; }
+        public int Grade { get; set; }
         public DateTime SubmitDate { get;set; }
         [ForeignKey("Student")]
         public int StudentId { get; set; }

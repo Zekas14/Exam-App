@@ -54,5 +54,14 @@ namespace ExaminationSystem.Controllers
             }
             return new (statusCode:400, message : ModelState) ;
         }
+        [HttpPost("SubmitExam")]
+        public ApiResponseDto<int> SubmitExam(ExamSubmissionDto dto)
+        {
+            if (ModelState.IsValid)
+            {
+                return _examService.SubmitExam(dto);
+            }
+            return new(400, ModelState);
+        }
     }
 }
